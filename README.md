@@ -1,1 +1,1 @@
-# github-ci-git-push
+# Github Action that pushes to git

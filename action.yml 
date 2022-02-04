@@ -1,0 +1,14 @@
+# action.yml
+name: 'GitHub Git-Push'
+description: 'Runs a git push to a remote Server on push on branch'
+with:
+ ssh_private_key: ${{secrets.SSH_PRIVATE_KEY}}
+inputs:
+ ssh-input:
+  description: 'Name/host/path of the ssh address from the git repo'
+  required: true
+runs:
+ using: 'docker'
+ image: 'Dockerfile'
+ args: ${{inputs.ssh-input}}
+
